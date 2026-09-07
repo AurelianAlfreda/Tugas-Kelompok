@@ -1,3 +1,4 @@
+Nama anggota kelompok:
 Clara Nata Valentina - 535250065
 Aurelian Alfreda - 535250088
 Chatrina Citra Patricia Hutabarat - 535250096
