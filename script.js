@@ -9,12 +9,11 @@ function angkaValid(...angka) {
 }
 
 function hitungPersegi() {
-  const panjang = ambilAngka('panjang');
-  const lebar = ambilAngka('lebar');
-  const valid = angkaValid(panjang, lebar);
+  const sisi = ambilAngka('sisi');
+  const valid = angkaValid(sisi);
   if (!valid) return { valid };
-  const luas = panjang * lebar;
-  const keliling = 2 * (panjang + lebar);
+  const luas = sisi * sisi;
+  const keliling = 4 * sisi;
   return {valid, luas, keliling};
 }
 
