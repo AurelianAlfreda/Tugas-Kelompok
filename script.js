@@ -9,10 +9,13 @@ function angkaValid(...angka) {
 }
 
 function hitungPersegi() {
-  const sisi = ambilAngka('sisi');
-  const valid = angkaValid(sisi);
+  const panjang = ambilAngka('panjang');
+  const lebar = ambilAngka('lebar');
+  const valid = angkaValid(panjang, lebar);
   if (!valid) return { valid };
-  return { valid, luas: sisi * sisi, keliling: 4 * sisi };
+  const luas = panjang * lebar;
+  const keliling = 2 * (panjang + lebar);
+  return {valid, luas, keliling};
 }
 
 function hitungPersegiPanjang() {
@@ -62,4 +65,53 @@ function hitungTrapesium() {
   const luas = 0.5 * (sisiAtas + sisiBawah) * tinggi;
   const keliling = sisiAtas + sisiBawah + sisiKiri + sisiKanan;
   return { valid, luas, keliling };
+}
+
+// event tobol hitungnya
+const tombolHitung = document.getElementById("hitung");
+
+if (tombolHitung) {
+
+    tombolHitung.addEventListener("click", function () {
+
+        let hasil;
+
+        if (document.getElementById("jariJari")) {
+          hasil = hitungLingkaran();
+
+        } else if (document.getElementById("sisiMiring")) {
+          hasil = hitungJajarGenjang();
+
+        } else if (document.getElementById("sisiAtas")) {
+          hasil = hitungTrapesium();
+
+        } else if (document.title.includes("Segitiga")) {
+          hasil = hitungSegitiga();
+
+        } else if (document.title.includes("Persegi Panjang")) {
+          hasil = hitungPersegiPanjang();
+
+        } else if (document.title.includes("Persegi")) {
+          hasil = hitungPersegi();
+        }
+
+        if (!hasil || !hasil.valid) {
+
+            document.getElementById("hasilLuas").textContent =
+              "Input tidak valid";
+
+            document.getElementById("hasilKeliling").textContent =
+              "Input tidak valid";
+
+            return;
+        }
+
+        document.getElementById("hasilLuas").textContent =
+          hasil.luas.toFixed(2);
+
+        document.getElementById("hasilKeliling").textContent =
+          hasil.keliling.toFixed(2);
+
+    });
+
 }
