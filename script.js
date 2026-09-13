@@ -63,32 +63,3 @@ function hitungTrapesium() {
   const keliling = sisiAtas + sisiBawah + sisiKiri + sisiKanan;
   return { valid, luas, keliling };
 }
-
-// ================= BAGIAN 4 - event & tampil ke DOM =================
-
-const namaHalaman = window.location.pathname.split('/').pop();
-
-const fungsiPerHalaman = {
-  'persegi.html': hitungPersegi,
-  'persegipanjang.html': hitungPersegiPanjang,
-  'segitiga.html': hitungSegitiga,
-  'lingkaran.html': hitungLingkaran,
-  'jajargenjang.html': hitungJajarGenjang,
-  'trapesium.html': hitungTrapesium
-};
-
-const tombolHitung = document.getElementById('hitung');
-
-if (tombolHitung && fungsiPerHalaman[namaHalaman]) {
-  tombolHitung.addEventListener('click', function () {
-    const hasil = fungsiPerHalaman[namaHalaman]();
-
-    if (!hasil.valid) {
-      alert('Isi semua kolom dengan angka yang valid (lebih dari 0).');
-      return;
-    }
-
-    document.getElementById('hasilLuas').textContent = hasil.luas.toFixed(2);
-    document.getElementById('hasilKeliling').textContent = hasil.keliling.toFixed(2);
-  });
-}
