@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Trapesium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Kalkulator</h1>
+    </div>
+
+    <div class="halaman trapesium">
+        <a class="kembali" href="index.html"> < Kembali</a>
+        <h1>Trapesium</h1>
+        <p>Hitung luas dan keliling trapesium.</p>
+
+        <div class="kalkulator">
+            <div class="input">
+                <h2>Masukkan Nilai</h2>
+
+                <label>Sisi Atas</label>
+                <input type="number" id="sisiAtas" placeholder="Masukkan sisi atas">
+
+                <label>Sisi Bawah</label>
+                <input type="number" id="sisiBawah" placeholder="Masukkan sisi bawah">
+
+                <label>Tinggi</label>
+                <input type="number" id="tinggi" placeholder="Masukkan tinggi">
+
+                <label>Sisi Kiri</label>
+                <input type="number" id="sisiKiri" placeholder="Masukkan sisi kiri">
+
+                <label>Sisi Kanan</label>
+                <input type="number" id="sisiKanan" placeholder="Masukkan sisi kanan">
+
+                <button id="hitung">Hitung</button>
+            </div>
+
+            <div class="hasil">
+                <h2>Hasil Perhitungan</h2>
+
+                <div class="hasils">
+                    <p>Luas</p>
+                    <h2 id="hasilLuas"></h2>
+                </div>
+
+                <div class="hasils">
+                    <p>Keliling</p>
+                    <h2 id="hasilKeliling"></h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="kiri"><p>Kalkulator</p></div>
+        <div id="tengah"><p>Kalkulator Luas dan Keliling Bangun Datar</p></div>
+        <div id="kanan"><p>&copy; 2026 Kalkulator</p></div>
+    </footer>
+</body>
+</html>
