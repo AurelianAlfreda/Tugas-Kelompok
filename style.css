@@ -1,1 +1,47 @@
+/* halaman mainny */
+* {margin: 0;padding: 0; font-family: sans-serif; font-weight: bold;}
+
+body {margin: 10px;}
+#header { background-color: cadetblue; overflow: auto; border-radius: 10px 10px 0 0 ; height: 70px;}
+
+#header h1 {float: left; margin-left: 50px; font-family: sans-serif; margin-top: 20px;}
+
+#isi {background-color: silver; padding-top: 20px; padding-bottom:20px;}
+#isi h1 {text-align: center; font-size: 50px;}
+#isi p {text-align: center; font-size: 20px;}
+
+#isi #shape {margin-top: 30px;}
+#isi #shape .row {justify-content: center; display: flex;}
+#isi #shape .shapes {width: 250px; height: 200px; background-color: white; box-sizing: border-box; border: 1px solid silver; margin: 20px; border-radius: 10px; text-align: center; }
+#isi #shape a.shapes {display: block; color: inherit; text-decoration: none; line-height: 200px;}
+
+footer {background-color: cadetblue; border-radius: 0 0 10px 10px; height: 50px; display: flex; justify-content: space-between; }
+#kiri, #tengah, #kanan {margin: 20px;}
+#kiri {text-align: left;}
+#tengah {text-align: center;}
+#kanan {text-align: right;}
+
+/* Halaman Kalkulatornya */
+.halaman {background-color: #f4f8ff; padding: 30px 80px 50px 80px; height: 600px;}
+.halaman .kembali {text-decoration: none; color: #2f80ed; font-size: 14px;}
+.halaman > h1 {text-align: center; color: #17233c; font-size: 35px; margin-top: 20px;}
+.halaman > p {text-align: center; color: #555555; margin-top: 8px;}
+
+.kalkulator {display: flex; justify-content: center; margin-top: 30px;}
+.input, .hasil {width: 350px; background-color: white; border: 1px solid #dddddd; border-radius: 10px; margin: 10px; padding: 25px;}
+
+.input h2, .hasil > h2 {font-size: 20px; color: #17233c; margin-bottom: 20px;}
+
+.input label {display: block; margin-top: 15px; margin-bottom: 7px; font-size: 14px; font-weight: bold;}
+.input input {width: 100%; height: 40px; border: 1px solid #cccccc; border-radius: 5px; padding-left: 10px; box-sizing: border-box;}
+
+.input button {width: 100%; height: 40px; background-color: #2f80ed; color: white; border: none; border-radius: 5px; margin-top: 25px; font-weight: bold;}
+.input button:hover {background-color: #1d6fd1;}
+
+.hasils {background-color: #f4f8ff; border-radius: 5px; padding: 15px; margin-top: 10px;}
+.hasils p {font-size: 13px; color: #555555;}
+.hasils h2 {color: #2f80ed; margin-top: 5px;}
+
+.halaman .kembali {font-size: 14px; text-decoration: none; font-weight: bold; font-family: sans-serif; color: black;}
+
 .halaman.trapesium {height: 650px;}
