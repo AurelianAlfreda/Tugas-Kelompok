@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Lingkaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Kalkulator</h1>
+    </div>
+
+    <div class="halaman">
+        <a class="kembali" href="index.html"> < Kembali</a>
+        <h1>Lingkaran</h1>
+        <p>Hitung luas dan keliling lingkaran.</p>
+
+        <div class="kalkulator">
+            <div class="input">
+                <h2>Masukkan Nilai</h2>
+
+                <label>Jari-jari</label>
+                <input type="number" id="jariJari" placeholder="Masukkan jari-jari">
+
+                <button id="hitung">Hitung</button>
+            </div>
+
+            <div class="hasil">
+                <h2>Hasil Perhitungan</h2>
+
+                <div class="hasils">
+                    <p>Luas</p>
+                    <h2 id="hasilLuas"></h2>
+                </div>
+
+                <div class="hasils">
+                    <p>Keliling</p>
+                    <h2 id="hasilKeliling"></h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="kiri"><p>Kalkulator</p></div>
+        <div id="tengah"><p>Kalkulator Luas dan Keliling Bangun Datar</p></div>
+        <div id="kanan"><p>&copy; 2026 Kalkulator</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
